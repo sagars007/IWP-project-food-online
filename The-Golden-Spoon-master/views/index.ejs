@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/images/tgstrans3.png" />
+	<script src="/assets/script.js"></script>
+	<title>The Golden Spoon </title>
+</head>
+<body>
+	<!--Toolbar-->
+	<div class="toolbar">
+		<a href="/index" class="logoLink">
+			<img class="toolbarImage" src="images/tgstrans2.png">
+			<span class="tgslogo">&nbsp The Golden Spoon</span>
+		</a>
+		<ul class="toolbarList">
+			<li><a href="/menu" class="toolbarLink">MENU</a></li><span class="pipe">  |  </span>
+			<li><a href="/location" class="toolbarLink">LOCATION</a></li><span class="pipe"> | </span>
+			<li><a href="/reservation" class="toolbarLink">RESERVATION</a></li><span class="pipe"> | </span>
+			<li><a href="/about" class="toolbarLink">ABOUT US</a></li>
+		</ul>
+		<ul class="toolbarList2">
+			<!-- <li><a href="/cart" class="toolbarLink">CART &nbsp<i class="fa fa-shopping-cart"></i></a></li><span class="pipe"> |</span> -->
+			<li id=user><a href="/login" class="toolbarLink">LOGIN &nbsp<i class="fa fa-user"></i></a></li>
+		</ul>
+	</div>
+	<!--EndToolbar-->
+	<!--Video-->
+	<div class="container">
+		<video width="100%" poster="videos/poster.jpg" autoplay loop muted="">
+        	<source src="videos/home-loop.mp4">
+		</video>
+		<div class="textOverlay">
+			<div class="text1">THE GOLDEN SPOON</div>
+			<div class="text2"><b>___________</b></div>
+			<br>
+			<div class="text3"><b>18 YEARS TO MASTER. YOURS TO SAVOUR.</b></div>
+			<br>
+			<div><a href="/menu" class="button1">SEE THE MENU</a></div>
+			<!--<div><a href="/menu" class="button2">ORDER ONLINE</a></div>-->
+		</div>
+	</div>
+	<!--Quote-->
+	<div class="cursiveContainer">
+		<div class="cursive">Redefining the art of cullinary,</div>
+		<div class="cursive">one grain at a time.</div>
+	</div>
+	<!--Image 1-->
+	<div class="parallax1">
+		<!--<img src="images/parallax1.jpg" width="100%" alt="Image Unavailable">-->
+		<div class="textOverlay">
+			<div class="text1">LOCAL FLAVOUR</div>
+			<div class="text2"><b>___________</b></div>
+			<br>
+			<div class="text3"><b>Family Owned. Locally Made. Community Focused.</b></div>
+			<br>
+			<div><a href="/location" class="button1">FIND US</a></div>
+		</div>
+	</div>
+	<!--Image 2-->
+	<div class="parallax2">
+		<!--<img src="images/parallax2.jpg" width="100%" alt="Image Unavailable">-->
+		<div class="textOverlay">
+			<div class="text1">IN THE BEGINING</div>
+			<div class="text2"><b>___________</b></div>
+			<br>
+			<div class="text3"><b>The story of TGS</b></div>
+			<br>
+			<div><a href="/about" class="button1">OUR HISTORY</a></div>
+		</div>
+	</div>
+	<!--Image 3-->
+	<div class="parallax3">
+		<!--<img src="images/parallax3.jpg" width="100%" alt="Image Unavailable">-->
+		<div class="textOverlay">
+			<div class="text1">LOYAL 4 LIFE</div>
+			<div class="text2"><b>___________</b></div>
+			<br>
+			<div class="text3"><b>Join our club</b></div>
+			<br>
+			<div><a href="/signup" class="button1">SIGN UP</a></div>
+		</div>
+	</div>
+	<!--Newsletter-->
+	<div class="newsletter">
+		<div>SIGN UP FOR OUR NEWSLETTER!</div><br>
+		<div>
+			<form method="POST" action="/subscribe">
+				<input type="email" placeholder="EMAIL*" class="mail" name="mailid" required>
+				<input type="submit" value="SUBSCRIBE" class="button1">
+			</form>
+		</div>
+		<!-- <div class="subscribeMessage"><%= message %></div> -->
+	</div>
+	<div id="alert3">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+		<%= message %>
+	</div>
+	<script type="text/javascript">
+		var user = '<%= user %>';
+			if(user!=''){
+			user = user.split('@');
+			user = user[0];
+			user = user[0].toUpperCase() + user.slice(1); 
+			user = 'Hi '+user+'!';
+			document.getElementById('user').className = 'dropdown';
+			var dropdown = user+' &nbsp<i class="fa fa-chevron-down"></i><div class="dropdown-content"><a href="/profile">Profile</a><a href="/cart">Cart</a><a href="/orders">Orders</a><a href="/logout">Logout</a></div>';
+			document.getElementById('user').innerHTML = dropdown;
+		} 
+		var message = '<%= message %>';
+		if (message==''){
+			document.getElementById('alert3').style.display = 'none';
+		}
+		else{
+			document.getElementById('alert3').style.display = 'block';
+		}
+	</script>
+</body>
+</html>

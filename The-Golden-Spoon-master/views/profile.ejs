@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/images/tgstrans3.png" />
+	<script src="/assets/script.js"></script>
+	<title>The Golden Spoon </title>
+</head>
+<body  class="cartBody">
+	<!--Toolbar-->
+	<div class="toolbar">
+		<a href="/index" class="logoLink">
+			<img class="toolbarImage" src="images/tgstrans2.png">
+			<span class="tgslogo">&nbsp The Golden Spoon</span>
+		</a>
+		<ul class="toolbarList">
+			<li><a href="/menu" class="toolbarLink">MENU</a></li><span class="pipe">  |  </span>
+			<li><a href="/location" class="toolbarLink">LOCATION</a></li><span class="pipe"> | </span>
+			<li><a href="/reservation" class="toolbarLink">RESERVATION</a></li><span class="pipe"> | </span>
+			<li><a href="/about" class="toolbarLink">ABOUT US</a></li>
+		</ul>
+		<ul class="toolbarList2">
+			<li id=user><a href="/login" class="toolbarLink">LOGIN &nbsp<i class="fa fa-user"></i></a></li>
+		</ul>
+	</div>
+	<div class="profile"><br> 
+		<span id="FNAME">First name: </span><span id="fname"></span><br><br>
+		<span id="LNAME">Last name: </span><span id="lname"></span><br><br>
+		<span id="EMAIL">E-Mail: </span><span id="email"></span><br><br>
+		<span id="PHNUMBER">Phone Number: </span><span id="phnumber"></span><br><br>
+		<span id="EMAIL">Newsletter subscrption: </span><span id="newsletter"></span><br><br>
+		<button class="button1" id="edit" onclick="editProfile()">Edit</button><br>
+	</div>
+
+	<div class="parallax4 textOverlay editProfile">
+		<form class="login" method="POST" action="/editprofile">
+			<div class="formelement">First name:
+  			<input class="formele" type="text" name="firstName" id="form_fname"><br></div>
+			<div class="formelement">Last name:
+  			<input class="formele" type="text" name="lastName" id="form_lname"><br></div>
+  			<div class="formelement">Old Password:
+  			<input class="formele" type="password" id="form_oldpassword" onfocusout="matchPassword()"><br></div>
+  			<div class="formelement">New Password:
+  			<input class="formele" type="password" name="password" id="password" onchange="validatePassword()"><br></div>
+  			<div class="formelement">Re-type password:
+  			<input class="formele" type="password" id="confirm_password" onkeyup="validatePassword()"><br></div>
+  			<div class="formelement">Phone number:
+  			<input class="formele" type="text" pattern="[789][0-9]{9}" name="phnumber" id="form_phnumber"><br></div>
+  			<div class="formelement">
+  			<input type="checkbox" name="newsletter" value="true" checked="true">Yes! I would like to receive your newsletters, coupons and/or specials.</div>
+  			<div class="formelement"><input class="formbutton" type="submit" value="UPDATE"></div>
+		</form>
+	</div>
+
+	<script type="text/javascript">
+		var user = '<%= user %>';
+			if(user!=''){
+			user = user.split('@');
+			user = user[0];
+			user = user[0].toUpperCase() + user.slice(1); 
+			user = 'Hi '+user+'!';
+			document.getElementById('user').className = 'dropdown';
+			var dropdown = user+' &nbsp<i class="fa fa-chevron-down"></i><div class="dropdown-content"><a href="/profile">Profile</a><a href="/cart">Cart</a><a href="/orders">Orders</a><a href="/logout">Logout</a></div>';
+			document.getElementById('user').innerHTML = dropdown;
+		}
+		var data = <%-JSON.stringify(data)%>;
+		console.log(data);
+		document.getElementById('fname').innerHTML = data.firstName;
+		document.getElementById('lname').innerHTML = data.lastName;
+		document.getElementById('email').innerHTML = data.email;
+		document.getElementById('phnumber').innerHTML = data.phnumber;
+		var newsletter;
+		if(data.newsletter)
+			newsletter = 'Yes';
+		else
+			newsletter = 'No';
+		document.getElementById('newsletter').innerHTML = newsletter;
+
+		function editProfile(){
+			var e1 = document.getElementsByClassName('profile');
+			e1[0].style.display = 'none';
+			var e2 = document.getElementsByClassName('editProfile');
+			e2[0].style.display = 'block'; 
+		}
+		document.getElementById("form_fname").value = data.firstName;
+		document.getElementById("form_lname").value = data.lastName;
+		document.getElementById("form_phnumber").value = data.phnumber;
+		var password = document.getElementById("password"), confirm_password = document.getElementById("confirm_password"), old_password = document.getElementById("form_oldpassword");
+
+		function matchPassword(){
+			if(old_password.value!=data.password){
+				console.log(old_password.value, data.password, 'invalid old password');
+				old_password.setCustomValidity('Invalid password');
+			}
+			else{
+				console.log('valid old password');
+    			old_password.setCustomValidity('');
+  			}
+		}
+
+		function validatePassword(){
+  			if(password.value != confirm_password.value){
+    			confirm_password.setCustomValidity("Passwords Don't Match");
+  			} 
+  			else{
+    			confirm_password.setCustomValidity('');
+  			}
+		}
+	</script>
+</body>
+</html>

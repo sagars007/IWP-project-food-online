@@ -1,0 +1,430 @@
+[
+	{
+	"item": "Barbeque Paneer Rice Bowl",
+	"description": "Fresh cilantro lime rice with shredded barbeque paneer",
+	"meal": "Maincourse",
+	"price": 359,
+	"name": "barbequepaneerricebowl "
+},
+{
+	"item": "Crispy Mushroom Rice Bowl",
+	"description": "Fresh cilantro lime rice with crispy mushroom and jalapenos",
+	"meal": "Maincourse",
+	"price": 365,
+	"name": "crispymushroomricebowl"
+},
+{
+	"item": "Veg Tikka Masala Burrito",
+	"description": "A soft tortilla roll with delicious veg filling topped with tikka masala sauce",
+	"meal": " Maincourse",
+	"price": 379,
+	"name": "vegtikkamasalaburrito"
+},
+{
+	"item": "Veg 7 layer Burrito",
+	"description": "A grilled soft Tortilla filled with 7 different fillings making it Saucy and Tangy",
+	"meal": " Maincourse",
+	"price": 419,
+	"name": "veg7layerburrito"
+},
+{
+	"item": "Veg Sriracha Burrito",
+	"description": "A soft tortilla roll with veg filling topped with tangy and spicy Sriracha sauce",
+	"meal": " Maincourse",
+	"price": 345,
+	"name": "vegsrirachaburrito"
+},
+{
+	"item": "Fajita Veggie Quesadilla",
+	"description": "A soft grilled Tortilla folded with vegetables, cheese and Mexican filling",
+	"meal": "Appetizers",
+	"price": 335,
+	"name": "fajitaveggiequesadilla"
+},
+{
+	"item": "Cheese Quesadilla",
+	"description": "A soft grilled Tortilla folded with loads of cheese and creamy Mexican filling",
+	"meal": " Appetizers",
+	"price": 335,
+	"name": "cheesequesadilla"
+},
+{
+	"item": "Pesto Cottage Cheese Panini",
+	"description": "Three coloured bell peppers cottage cheese marination basil pesto sauce",
+	"meal": " Appetizers ",
+	"price": 310,
+	"name": "pestocottagecheesepanini"
+},
+{
+	"item": "Burger Trio",
+	"description": "Miniburger(3) with french fries and salsa dip",
+	"meal": "Maincourse",
+	"price": 300,
+	"name": "burgertrio"
+},
+{
+	"item": "Nachos Grande",
+	"description":"Tortilla chips with Mexican beans,sour cream,salsa,jalapeno,olives and cheese",
+	"meal": "Appetizers",
+	"price": 350,
+	"name": " nachosgrande "
+},
+{
+	"item": "Kit Kat Shake",
+	"description": "Signature milkshake made of kitkat topped with whipped cream and kitkat",
+	"meal": "Beverages",
+	"price": 320,
+	"name": "kitkatshake"
+},
+{
+	"item": "Strawberry Cheese Cake Shake",
+	"description": "Strawberry ice cream blended with kiri cheese and graham cracker powder",
+	"meal": "Beverages",
+	"price": 340,
+	"name": "strawberrycheesecakeshake"
+},
+{
+	"item": "Peri Peri Potato Nachos",
+	"description": "Savour crispy nachos (corno-tortilla) with peri peri potato",
+	"meal": "Appetizers",
+	"price": 280,
+	"name": "periperipotatonachos"
+},
+{
+	"item": "Peri Peri Potato Veg Salad",
+	"description": "Healthy salad bowl with peri peri potato and tasty veggies",
+	"meal": "Soups and Salads",
+	"price": 235,
+	"name": "periperipotatovegsalad"
+},
+{
+	"item": "Grilled Peri Peri Chicken Salad",
+	"description": "Healthy salad bowl with grilled peri peri chicken",
+	"meal": "Soups and Salads",
+	"price": 290,
+	"name": "grilledperiperichickensalad"
+},
+{
+	"item": "Mexican corn Fiesta Quesadilla",
+	"description": "Corn,black beans and jalapenos grilled with cheese in a tortilla",
+	"meal": "Appetizers",
+	"price": 370,
+	"name": "mexicancornfiestaquesadilla"
+},
+{
+	"item": "Cheesy Tostada",
+	"description": "A blend of soft and crunchy tortilla topped with pico, cheese, beans and dip",
+	"meal": "Appetizers",
+	"price": 240,
+	"name": "cheesytostada"
+},
+{
+	"item": "Bbq Chicken Wrap",
+	"description": "Delicious wrap with shredded chicken infused in mayonnaise and bbq sauce",
+	"meal": "Maincourse",
+	"price": 360,
+	"name": "bbqchickenwrap"
+},
+{
+	"item": "Shredded Cocktail Chicken Wrap",
+	"description": "Marinated chicken seasoned with Dijon mustard and spices on a tortilla",
+	"meal": "Maincourse",
+	"price": 380,
+	"name": "shreddedcocktailchickenwrap"
+},
+{
+	"item": "Achari Paneer Tikka Wrap",
+	"description": "Spicy-tangy treat of cottage cheese and bell peppers in a Laccha Paratha",
+	"meal": "Maincourse",
+	"price": 330,
+	"name": "acharipaneertikkawrap"
+},
+{
+	"item": "Chilli Corn 65",
+	"description": "Spicy deep-fried sweet corn tossed in chilli,curry leaves and peri-peri",
+	"meal": "Appetizers",
+	"price": 290,
+	"name": "chillicorn65"
+},
+{
+	"item": "Muesli Fruit Yogurt Parfait",
+	"description": "Indulge in the goodness of yogurt and freshly cut fruits and muesli",
+	"meal": "Desserts",
+	"price": 300,
+	"name": "mueslifruityogurtparfait"
+},
+{
+	"item": "Banana Walnut Teacake",
+	"description": "Our Banana Walnut Teacake is an exquisite blend of fruit and nut",
+	"meal": "Desserts",
+	"price": 330,
+	"name": "bananawalnutteacake"
+},
+{
+	"item": "Tennessee Twin Keto Chicken Steak",
+	"description": "Fresh green beans, and bell pepper complementing grilled breast of chicken",
+	"meal": "Appetizers",
+	"price": 340,
+	"name": "tennesseetwinketochickensteak"
+},
+{
+	"item": "Walnut Brownie",
+	"description": "Chewy, nutty, fudgy delectable rectangles that can turn a frown into a smile",
+	"meal": "Desserts",
+	"price": 320,
+	"name": "walnutbrownie"
+},
+{
+	"item": "Jam-Centered Cheesecake",
+	"description": "This creamy cheesecake is baked with a flavorful swirl of strawberry compote",
+	"meal": "Desserts",
+	"price": 350,
+	"name": "jamcenteredcheesecake"
+},
+{
+	"item": "Dark Chocolate Truffle",
+	"description": "Spheres of ganache and cream rolled in powdered cocoa ",
+	"meal": "Desserts",
+	"price": 400,
+	"name": "darkchocolatetruffle"
+},
+{
+	"item": "Sea Salt Brownie Cookie",
+	"description": "A gooey brownie-cookie enriched with a sprinkle of sea-salt crystals",
+	"meal": "Desserts",
+	"price": 200,
+	"name": "seasaltbrowniecookie"
+},
+{
+	"item": "Keto Bomb Jar ",
+	"description": "Vegetable fat folded in a mix of almonds, peanuts and sugar free chocolate",
+	"meal": "Desserts",
+	"price": 450,
+	"name": "ketobombjar"
+},
+{
+	"item": "Red-Velvet Charlotte ",
+	"description": "Sliced and sandwiched with cream cheese and pockets of chocolate chips",
+	"meal": "Desserts",
+	"price": 350,
+	"name": "redvelvetcharlotte"
+},
+{
+	"item": "Epigamia Greek Yogurt Smoothie - Strawberry ",
+	"description": "Strawberry yogurt smoothie filled with almonds, topped with whip cream",
+	"meal": "Beverages",
+	"price": 390,
+	"name": "epigamiagreekyogurtsmoothiestrawberry"
+},
+{
+	"item": "Epigamia Greek Yogurt Smoothie - Alphonso Mango",
+	"description": "Greek yogurt smoothie made of fresh alphonso mangoes",
+	"meal": "Beverages",
+	"price": 390,
+	"name": "epigamiagreekyogurtsmoothiealphonsomango"
+},
+{
+	"item": "Green Salad ",
+	"description": "Healthy salad with green leafy vegetables with pepper topping",
+	"meal": "Soups and Salads",
+	"price": 260,
+	"name": "greensalad"
+},
+{
+	"item": "Cold Coffee ",
+	"description": "Just what you need on a hot, sunny day",
+	"meal": "Beverages",
+	"price": 240,
+	"name": "coldcoffee"
+},
+{
+	"item": "Oats Banana Date Smoothie",
+	"description": "Delicious blend of chopped dates and bananas with a scoop of rolled oats",
+	"meal": "Beverages",
+	"price": 250,
+	"name": "oatsbananadatesmoothie "
+},
+{
+	"item": "Peanut Butter Banana Shake",
+	"description": "Sticky peanut butter and chunks of banana blended into a yummy shake. ",
+	"meal": "Beverages",
+	"price": 250,
+	"name": "peanutbutterbananashake"
+},
+{
+	"item": "Avocado Banana Super Shake ",
+	"description": "Vegetable fat folded in a mix of almonds, peanuts and sugar free chocolate",
+	"meal": "Beverages",
+	"price": 260,
+	"name": "avocadobananasupershake"
+},
+{
+	"item": "Lemon Iced Tea",
+	"description": "The ideal thirst quencher with loads of lime and anti-oxidants",
+	"meal": "Beverages",
+	"price": 230,
+	"name": "lemonicedtea"
+},
+{
+	"item": "Green Grapes Apple Shake",
+	"description": "Your apple a day combined with fresh grapes, milk and brown sugar",
+	"meal": "Beverages",
+	"price": 290,
+	"name": "greengrapesappleshake"
+},
+{
+	"item": "Red velvet cake Shots Box of 3",
+	"description": "A ball of delicious red velvet cake covered in chocolate",
+	"meal": "Desserts",
+	"price": 290,
+	"name": "redvelvetcakeshotsboxof3"
+},
+{
+	"item": "Death By Chocolate Cake In A Jar",
+	"description": "Overdose of chocolate in a jar",
+	"meal": "Desserts",
+	"price": 250,
+	"name": "deathbychocolatecakeinajar"
+},
+{
+	"item": "Chocolate Truffle In A Jar ",
+	"description": "Layers of delicious chocolate cake and chocolate ganache packed in a jar",
+	"meal": "Desserts",
+	"price": 290,
+	"name": "chocolatetruffleinajar"
+},
+{
+	"item": "Broccoli Soup ",
+	"description": "Blanched broccoli blended & simmered in a rich, creamy broth",
+	"meal": "Soups and Salads",
+	"price": 250,
+	"name": "broccolisoup"
+},
+{
+	"item": "Popeye Almond Soup ",
+	"description": "A warm velvety soup flavoured with roasted almonds & blanched spinach",
+	"meal": "Soups and Salads",
+	"price": 290,
+	"name": "popeyealmondsoup"
+},
+{
+	"item": "Tomato & Basil Soup ",
+	"description": "Basil & tomato pureed to perfection in a delicately seasoned sauce",
+	"meal": "Soups and Salads",
+	"price": 290,
+	"name": "tomato&basilsoup"
+},
+{
+	"item": "Chicken Almond Soup",
+	"description": "Marinated chicken added to toasted almonds in a hearty broth ",
+	"meal": " Soups and Salads",
+	"price": 310,
+	"name": "chickenalmondsoup "
+},
+{
+	"item": "The Classic Chicken Soup ",
+	"description": "Chicken marinated in garlic butter & simmered to perfection in clear stock",
+	"meal": " Soups and Salads",
+	"price": 320,
+	"name": "theclassicchickensoup"
+},
+{
+	"item": "Grilled Chicken Corn Salad",
+	"description": "Chicken marinated in garlic & lemon juice with olive oil, pepper and corn",
+	"meal": " Soups and Salads",
+	"price": 299,
+	"name": "grilledchickencornsalad"
+},
+{
+	"item": "The Golden Spoon Special Salad",
+	"description": "Your apple a day combined with fresh grapes, milk and brown sugar",
+	"meal": "Soups and Salad",
+	"price": 300,
+	"name": "thegoldenspoonspecialsalad"
+},
+{
+	"item": "Sichuan Vegetable In Hot Pot Sauce",
+	"description": "A fragrant stew with lotus stem, bamboo shoots, shitake mushrooms",
+	"meal": "Maincourse",
+	"price": 320,
+	"name": "grilledchickencornsalad"
+},
+{
+	"item": "Corn And Potato Tsing Hoi Style ",
+	"description": "Chicken marinated in garlic & lemon juice with olive oil, pepper and corn",
+	"meal": "Maincourse",
+	"price": 450,
+	"name": "cornandpotatotsinghoistyle"
+},
+{
+	"item": "Seasonal Vegetable In Smoked Chilli Sauce",
+	"description": "A smokey fusion of dry roasted chillies, seasonal vegetables and chestnuts",
+	"meal": "Maincourse",
+	"price": 480,
+	"name": "seasonalvegetableinsmokedchillisauce"
+},
+{
+	"item": "Foodies Favourite Chicken",
+	"description": "Diced chicken in a sweet, sour and spicy soya sauce with crushed peanuts",
+	"meal": "Maincourse",
+	"price": 430,
+	"name": "foodiesfavouritechicken"
+},
+{
+	"item": "Chicken In Black Pepper Sauce",
+	"description": "Shredded chicken tossed in a robust black pepper sauce",
+	"meal": "Maincourse",
+	"price": 500,
+	"name": "chickeninblackpeppersauce"
+},
+{
+	"item": "Braised Lamb In Mahlak Sauce ",
+	"description": "Sliced lamb flavoured with five spice powder and tingling schezwan peppers",
+	"meal": "Maincourse",
+	"price": 530,
+	"name": "braisedlambinmahlaksauce"
+},
+{
+	"item": "Roast Lamb In Chilli Bean Sauce",
+	"description": "Roast lamb and fresh chillies braised in black bean and soya sauce",
+	"meal": "Maincourse",
+	"price": 510,
+	"name": "roastlambinchillibeansauce"
+},
+{
+	"item": "Crispy Lotus Stem with Curry Leaves And Black Pepper",
+	"description": "Lotus stem rounds tossed with curry leaves and black pepper",
+	"meal": "Appetizers",
+	"price": 440,
+	"name": "crispylotusstemwithcurryleavesandblackpepper"
+},
+{
+	"item": "Crackling Spinach",
+	"description": "Shredded spinach, fried crisp, tossed with almonds slivers and sesame seeds",
+	"meal": "Appetizers",
+	"price": 420,
+	"name": "cracklingspinach"
+},
+{
+	"item": "Vegetable In Chilli Plum Sauce",
+	"description": "Crisp seasonal vegetables stir fried in a tart and sweet sauce",
+	"meal": "Appetizers",
+	"price": 380,
+	"name": "vegetableinchilliplumsauce"
+},
+{
+	"item": "Stir Fried Teriyaki Mushroom with Fresh Ginger",
+	"description": "Mushroom tossed in a sweet Japanese teriyaki sauce spiked with chillies",
+	"meal": "Appetizers",
+	"price": 400,
+	"name": "stirfriedteriyakimushroomwithfreshginger"
+},
+{
+	"item": "Wok Tossed Tofu Hunan Style",
+	"description": "Soft fresh tofu cubes stir fried in a splash of soy sauce and dry red chillies",
+	"meal": "Appetizers",
+	"price": 500,
+	"name": "woktossedtofuhunanstyle"
+}
+]
+

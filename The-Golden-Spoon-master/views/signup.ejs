@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/images/tgstrans3.png" />
+	<script src="/assets/script.js"></script>
+	<title>The Golden Spoon </title>
+</head>
+<body>
+	<!--Toolbar-->
+	<div class="toolbar">
+		<a href="/index" class="logoLink">
+			<img class="toolbarImage" src="images/tgstrans2.png">
+			<span class="tgslogo">&nbsp The Golden Spoon</span>
+		</a>
+		<ul class="toolbarList">
+			<li><a href="/menu" class="toolbarLink">MENU</a></li><span class="pipe">  |  </span>
+			<li><a href="/location" class="toolbarLink">LOCATION</a></li><span class="pipe"> | </span>
+			<li><a href="/reservation" class="toolbarLink">RESERVATION</a></li><span class="pipe"> | </span>
+			<li><a href="/about" class="toolbarLink">ABOUT US</a></li>
+		</ul>
+		<ul class="toolbarList2">
+			<!-- <li><a href="/cart" class="toolbarLink">CART &nbsp<i class="fa fa-shopping-cart"></i></a></li><span class="pipe"> |</span> -->
+			<li id=user><a href="/login" class="toolbarLink">LOGIN &nbsp<i class="fa fa-user"></i></a></li>
+		</ul>
+	</div>
+	<!--EndToolbar-->
+	<!--form-->
+	<div class="parallax4 textOverlay">
+		<form class="login" method="POST" action="/signupSubmit">
+			<div class="formelement">First name:
+  			<input class="formele" type="text" name="firstName" placeholder="Enter your first name" required><br></div>
+			<div class="formelement">Last name:
+  			<input class="formele" type="text" name="lastName" placeholder="Enter your last name" required><br></div>
+  			<div class="formelement">Email:
+  			<input class="formele" type="email" name="email" placeholder="Enter a valid e-mail id" required><br></div>
+  			<div class="formelement">Password:
+  			<input class="formele" type="password" name="password" id="password" placeholder="Enter a password" required><br></div>
+  			<div class="formelement">Re-type password:
+  			<input class="formele" type="password" id="confirm_password" placeholder="Re-enter your password" required><br></div>
+  			<div class="formelement">Phone number:
+  			<input class="formele" type="text" pattern="[789][0-9]{9}" name="phnumber" placeholder="Enter a 10 digit valid phone number" required><br></div>
+  			<!--<div class="formelement">Country/Region:
+  			<input class="formele" type="text" name="country" placeholder=""><br></div>
+  			<div class="formelement">Pincode:
+  			<input class="formele" type="text" name="pincode" placeholder=""><br></div>
+  			<div class="formelement">Street address:
+  			<input class="formele" type="text" name="street" placeholder=""><br></div>
+  			<div class="formelement">Landmark:
+  			<input class="formele" type="text" name="landmark" placeholder=""><br></div>
+  			<div class="formelement">City:
+  			<input class="formele" type="text" name="city" placeholder=""><br></div>
+  			<div class="formelement">State:
+  			<input class="formele" type="text" name="state" placeholder=""><br></div>-->
+  			<div class="formelement">
+  			<input type="checkbox" name="newsletter" value="true" checked="true">Yes! I would like to receive your newsletters, coupons and/or specials.</div>
+  			<div class="formelement"><input class="formbutton" type="submit" value="SIGN UP">
+  			<input class="formbutton" type="reset" value="RESET"></div>
+		</form>
+	</div>
+	<script type="text/javascript">
+		var password = document.getElementById("password"), confirm_password = document.getElementById("confirm_password");
+
+		function validatePassword(){
+  			if(password.value != confirm_password.value) {
+    			confirm_password.setCustomValidity("Passwords Don't Match");
+  			} 
+  			else {
+    			confirm_password.setCustomValidity('');
+  			}
+		}
+
+		password.onchange = validatePassword;
+		confirm_password.onkeyup = validatePassword;
+	</script>
+</body>
+</html>

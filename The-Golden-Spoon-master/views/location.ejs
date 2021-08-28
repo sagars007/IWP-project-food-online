@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/images/tgstrans3.png" />
+	<script src="/assets/script.js"></script>
+	<title>The Golden Spoon </title>
+</head>
+<body>
+	<!--Toolbar-->
+	<div class="toolbar">
+		<a href="/index" class="logoLink">
+			<img class="toolbarImage" src="images/tgstrans2.png">
+			<span class="tgslogo">&nbsp The Golden Spoon</span>
+		</a>
+		<ul class="toolbarList">
+			<li><a href="/menu" class="toolbarLink">MENU</a></li><span class="pipe">  |  </span>
+			<li><a href="/location" class="toolbarLink">LOCATION</a></li><span class="pipe"> | </span>
+			<li><a href="/reservation" class="toolbarLink">RESERVATION</a></li><span class="pipe"> | </span>
+			<li><a href="/about" class="toolbarLink">ABOUT US</a></li>
+		</ul>
+		<ul class="toolbarList2">
+			<!-- <li><a href="/cart" class="toolbarLink">CART &nbsp<i class="fa fa-shopping-cart"></i></a></li><span class="pipe"> |</span> -->
+			<li id=user><a href="/login" class="toolbarLink">LOGIN &nbsp<i class="fa fa-user"></i></a></li>
+		</ul>
+	</div>
+	<!--EndToolbar-->
+	<!--Image 1-->
+	<div class="parallax1">
+		<!--<img src="images/parallax1.jpg" width="100%" alt="Image Unavailable">-->
+		<div class="textOverlay">
+			<div class="locationText1">OUR LOCATIONS</div>
+			<div class="locationText2"><b>___________</b></div>
+			<br>
+			<div class="locationText3"><b>COME ON IN AND PULL UP A CHAIR</b></div>
+		</div>
+	</div>
+	<!--Text1-->
+	<div class="callUs">
+		For call ahead pick-up ordering, Call 9876543210
+	</div>
+	<!--9 locations-->
+	<div class="locationContainer">
+  		<img src="images/loc1.jpg" class="locationImage">
+  		<div class="locationOverlay">
+    		<div class="locationText">VELLORE<br><span class="addr">VIT University, Vellore - 632014</span></div>
+  		</div>
+	</div>
+	<div class="locationContainer">
+  		<img src="images/loc2.jpg" class="locationImage">
+  		<div class="locationOverlay">
+    		<div class="locationText">CHENNAI<br><span class="addr">Express Avenue, Chennai - 600001</span></div>
+  		</div>
+	</div>
+	<div class="locationContainer">
+  		<img src="images/loc3.jpg" class="locationImage">
+  		<div class="locationOverlay">
+    		<div class="locationText">MUMBAI<br><span class="addr">Phoenix Marketcity, Mumbai - 643055</span></div>
+  		</div>
+	</div>
+	<div class="locationContainer">
+  		<img src="images/loc4.jpg" class="locationImage">
+  		<div class="locationOverlay">
+    		<div class="locationText">DELHI<br><span class="addr">Vasant Square Mall, New Delhi - 654321</span></div>
+  		</div>
+	</div>
+	<div class="locationContainer">
+  		<img src="images/loc5.jpg" class="locationImage">
+  		<div class="locationOverlay">
+    		<div class="locationText">BANGALORE<br><span class="addr">The Forum Mall, Bangalore - 601010</span></div>
+  		</div>
+	</div>
+	<div class="locationContainer">
+  		<img src="images/loc6.jpg" class="locationImage">
+  		<div class="locationOverlay">
+    		<div class="locationText">CALCUTTA<br><span class="addr">OH-170 Rajiv Gandhi Nagar, Calcutta - 43920</span></div>
+  		</div>
+	</div>
+	<div class="locationContainer">
+  		<img src="images/loc7.jpg" class="locationImage">
+  		<div class="locationOverlay">
+    		<div class="locationText">HYDERABAD<br><span class="addr">Forum Sujana, Hyderabad - 383473</span></div>
+  		</div>
+	</div>
+	<div class="locationContainer">
+  		<img src="images/loc8.jpg" class="locationImage">
+  		<div class="locationOverlay">
+    		<div class="locationText">GOA<br><span class="addr">Cacullo Mall, Panjim, Goa - 867897</span></div>
+  		</div>
+	</div>
+	<div class="locationContainer">
+  		<img src="images/loc9.jpg" class="locationImage">
+  		<div class="locationOverlay">
+    		<div class="locationText">JAIPUR<br><span class="addr">Hungry Birds Block, Jaipur - 234152</span></div>
+  		</div>
+	</div>
+	<div class="newsletter">
+		<div>SIGN UP FOR OUR NEWSLETTER!</div><br>
+		<div>
+			<form method="POST" action="/subscribe">
+				<input type="email" placeholder="EMAIL*" class="mail" name="mailid" required>
+				<input type="submit" value="SUBSCRIBE" class="button1">
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var user = '<%= user %>';
+			if(user!=''){
+			user = user.split('@');
+			user = user[0];
+			user = user[0].toUpperCase() + user.slice(1); 
+			user = 'Hi '+user+'!';
+			document.getElementById('user').className = 'dropdown';
+			var dropdown = user+' &nbsp<i class="fa fa-chevron-down"></i><div class="dropdown-content"><a href="/profile">Profile</a><a href="/cart">Cart</a><a href="/orders">Orders</a><a href="/logout">Logout</a></div>';
+			document.getElementById('user').innerHTML = dropdown;
+		} 
+	</script>
+</body>
+</html>

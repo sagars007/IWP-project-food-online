@@ -1,0 +1,3 @@
+newsletter subscription mail getting sent even though there is no internet connection
+indicate that mail has been sent or not through custom alert
+change all 4 rivers to TGS

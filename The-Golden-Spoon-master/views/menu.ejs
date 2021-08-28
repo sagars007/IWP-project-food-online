@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/images/tgstrans3.png" />
+	<script src="/assets/script.js"></script>
+	<title>The Golden Spoon </title>
+</head>
+<body>
+	<!--Toolbar-->
+	<div class="toolbar">
+		<a href="/index" class="logoLink">
+			<img class="toolbarImage" src="images/tgstrans2.png">
+			<span class="tgslogo">&nbsp The Golden Spoon</span>
+		</a>
+		<ul class="toolbarList">
+			<li><a href="/menu" class="toolbarLink">MENU</a></li><span class="pipe">  |  </span>
+			<li><a href="/location" class="toolbarLink">LOCATION</a></li><span class="pipe"> | </span>
+			<li><a href="/reservation" class="toolbarLink">RESERVATION</a></li><span class="pipe"> | </span>
+			<li><a href="/about" class="toolbarLink">ABOUT US</a></li>
+		</ul>
+		<ul class="toolbarList2">
+			<!-- <li><a href="/cart" class="toolbarLink">CART &nbsp<i class="fa fa-shopping-cart"></i></a></li><span class="pipe"> |</span> -->
+			<li id=user><a href="/login" class="toolbarLink">LOGIN &nbsp<i class="fa fa-user"></i></a></li>
+		</ul>
+	</div>
+	<!--EndToolbar-->
+	<!--Image 1-->
+	<div class="parallax7">
+		<!--<img src="images/parallax7.jpg" width="100%" alt="Image Unavailable">-->
+		<div class="textOverlay">
+			<div class="text1">OUR MENU</div>
+			<div class="text2"><b>___________</b></div>
+			<br>
+			<div class="text3"><b>MAY THE BELLY RULE THE MIND</b></div>
+		</div>
+	</div>
+	<!--Text1-->
+	<div class="callUs">
+		For call ahead pick-up ordering, Call 9876543210
+	</div>
+	<div id="login2order">
+		
+	</div>
+	<!--Menu-->
+	<form class="menu" method="POST" action="/add2cart">
+		<div class="menuHeading" id="m1" onclick="disp1()">
+			<span class="meal">SOUPS & SALADS</span>
+			<img src="images/plus.png" class="rotPlus">
+		</div>
+		<div id="items1" style="display:none">
+			<ul>
+				<% for (item of menu){
+					if(item.meal=='Soups and Salads'){ %>
+					<li><%=item.item%> - <input type="number" name="<%=item.name%>"  value='' min="0" max="5" class="privilege"><span class="menuItem">Rs. <%=item.price%></span><span><br><%=item.description%></span></li>
+					<%}
+				}%>
+			</ul>
+		</div>
+		<div class="menuHeading" id="m2" onclick="disp2()">
+			<span  class="meal">APPETIZERS</span>
+			<img src="images/plus.png" class="rotPlus">
+		</div>
+		<div id="items2" style="display:none">
+			<ul>
+				<% for (item of menu){
+					if(item.meal=='Appetizers'){ %>
+					<li><%=item.item%> - <input type="number" name="<%=item.name%>"  min="0" max="5" class="privilege"><span class="menuItem">Rs. <%=item.price%></span><span><br><%=item.description%></span></li>
+					<%}
+				}%>
+			</ul>
+		</div>
+		<div class="menuHeading"  id="m3"  onclick="disp3()">
+			<span class="meal">MAIN COURSE</span>
+			<img src="images/plus.png" class="rotPlus">
+		</div>
+		<div id="items3" style="display:none">
+			<ul>
+				<% for (item of menu){
+					if(item.meal=='Maincourse'){ %>
+					<li><%=item.item%> - <input type="number" name="<%=item.name%>"  min="0" max="5" class="privilege"><span class="menuItem">Rs. <%=item.price%></span><span><br><%=item.description%></span></li>
+					<%}
+				}%>
+			</ul>
+		</div>
+		<div class="menuHeading"  id="m4"  onclick="disp4()">
+			<span class="meal">BEVERAGES</span>
+			<img src="images/plus.png" class="rotPlus">
+		</div>
+		<div id="items4" style="display:none">
+			<ul>
+				<% for (item of menu){
+					if(item.meal=='Beverages'){ %>
+					<li><%=item.item%> - <input type="number" name="<%=item.name%>"  min="0" max="5" class="privilege"><span class="menuItem">Rs. <%=item.price%></span><span><br><%=item.description%></span></li>
+					<%}
+				}%>
+			</ul>
+		</div>
+		<div class="menuHeading"  id="m5"  onclick="disp5()">
+			<span class="meal">DESSERTS</span>
+			<img src="images/plus.png" class="rotPlus">
+		</div>
+		<div id="items5" style="display:none">
+			<ul>
+				<% for (item of menu){
+					if(item.meal=='Desserts'){ %>
+					<li><%=item.item%> - <input type="number" name="<%=item.name%>"  min="0" max="5"  class="privilege"><span class="menuItem">Rs. <%=item.price%></span><span><br><%=item.description%></span></li>
+					<%}
+				}%>
+			</ul>
+		</div>
+		<br>
+		<div class="submitMenu">
+			<input type="submit" class="button2 privilege" value="ADD TO CART">
+			<input class="button1 privilege" type="reset" value="RESET">
+		</div>
+	</form>
+	<!--Newsletter-->
+	<div class="newsletter">
+		<div>SIGN UP FOR OUR NEWSLETTER!</div><br>
+		<div>
+			<form method="POST" action="/subscribe">
+				<input type="email" placeholder="EMAIL*" class="mail" name="mailid" required>
+				<input type="submit" value="SUBSCRIBE" class="button1">
+			</form>
+		</div>
+	</div>
+	<div id="alert">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+		Items successfully added to cart
+	</div>
+	<script type="text/javascript">
+		var user = '<%= user %>';
+		if(user!=''){
+			if(user[0]=='*'){
+				user = user.slice(1);
+				document.getElementById('alert').style.display = 'block';
+			}
+			user = user.split('@');
+			user = user[0];
+			user = user[0].toUpperCase() + user.slice(1); 
+			user = 'Hi '+user+'!';
+			document.getElementById('user').className = 'dropdown';
+			var dropdown = user+' &nbsp<i class="fa fa-chevron-down"></i><div class="dropdown-content"><a href="/profile">Profile</a><a href="/cart">Cart</a><a href="/orders">Orders</a><a href="/logout">Logout</a></div>';
+			document.getElementById('user').innerHTML = dropdown;
+			document.getElementById('login2order').style.display = 'none';
+		}
+		else{
+			var privilege = document.getElementsByClassName('privilege'), i;
+			for (var i = 0; i < privilege.length; i ++) {
+    			privilege[i].style.display = 'none';
+			}
+			document.getElementById('login2order').innerHTML = '<a href="/login">Login to place your order</a>';
+		} 
+	</script>
+</body>
+</html>

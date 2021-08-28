@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/images/tgstrans3.png" />
+	<script src="/assets/script.js"></script>
+	<title>The Golden Spoon </title>
+</head>
+<body>
+	<!--Toolbar-->
+	<div class="toolbar">
+		<a href="/index" class="logoLink">
+			<img class="toolbarImage" src="images/tgstrans2.png">
+			<span class="tgslogo">&nbsp The Golden Spoon</span>
+		</a>
+		<ul class="toolbarList">
+			<li><a href="/menu" class="toolbarLink">MENU</a></li><span class="pipe">  |  </span>
+			<li><a href="/location" class="toolbarLink">LOCATION</a></li><span class="pipe"> | </span>
+			<li><a href="/reservation" class="toolbarLink">RESERVATION</a></li><span class="pipe"> | </span>
+			<li><a href="/about" class="toolbarLink">ABOUT US</a></li>
+		</ul>
+		<ul class="toolbarList2">
+			<!-- <li><a href="/cart" class="toolbarLink">CART &nbsp<i class="fa fa-shopping-cart"></i></a></li><span class="pipe"> |</span> -->
+			<li id=user><a href="/login" class="toolbarLink">LOGIN &nbsp<i class="fa fa-user"></i></a></li>
+		</ul>
+	</div>
+	<!--EndToolbar-->
+	<!--Payment Form-->
+	<div class="parallax4 textOverlay">
+		<div class="creditcard">
+			<b>Payment:</b>
+            <i class="fa fa-google-wallet" style="color:blue; font-size:2em;"></i>
+            <i class="fa fa-paypal" style="color:steelblue; font-size:2em;"></i>
+			<div class="formelement">Select Bank:
+  				<select class="formele">
+  					<option></option>
+					<option>Airtel Payments Bank</option>
+					<option>Axis Bank</option>
+					<option>HDFC Bank</option>
+					<option>ICICI Bank</option>
+					<option>Kotak Bank</option>
+					<option>State Bank of India</option>
+					<option>Allahabad Bank</option>
+					<option>Andhra Bank</option>
+					<option>Bandhan bank</option>
+					<option>Bank of Bahrain and Kuwait</option>
+					<option>Bank of Baroda - Corporate Banking</option>
+					<option>Bank of Baroda - Retail Banking</option>
+					<option>Bank of India</option>
+					<option>Bank of Maharashtra</option>
+					<option>Bassien Catholic Co-Operative Bank</option>
+					<option>Bharatiya Mahila Bank</option>
+					<option>Canara Bank</option>
+					<option>Catholic Syrian Bank</option>
+					<option>Central Bank of India</option>
+					<option>City Union Bank</option>
+					<option>Corporation Bank</option>
+					<option>Cosmos Bank</option>
+					<option>Dena Bank</option>
+					<option>Deutsche Bank</option>
+					<option>Development Credit Bank</option>
+					<option>Dhanlakshmi Bank</option>
+					<option>Digibank by DBS</option>
+					<option>Federal Bank</option>
+					<option>IDBI Bank</option>
+					<option>IDFC FIRST Bank</option>
+					<option>ING Vysya Bank</option>
+					<option>Indian Bank</option>
+					<option>Indian Overseas Bank</option>
+					<option>IndusInd Bank</option>
+					<option>Jammu & Kashmir Bank</option>
+					<option>Janata Sahakari Bank</option>
+					<option>Kalyan Janata Sahakari Bank</option>
+					<option>Karnataka Bank Ltd</option>
+					<option>Karur Vysya Bank</option>
+					<option>Laxmi Vilas Bank - Corporate</option>
+					<option>Laxmi Vilas Bank - Retail</option>
+					<option>Oriental Bank of Commerce</option>
+					<option>PNB YUVA Netbanking</option>
+					<option>Punjab & Maharashtra Co-operative Bank</option>
+					<option>Punjab & Sind Bank</option>
+					<option>Punjab National Bank - Corporate Banking</option>
+					<option>Punjab National Bank - Retail Banking</option>
+					<option>Ratnakar Bank</option>
+					<option>Saraswat Bank</option>
+					<option>Shamrao Vitthal Co-operative Bank</option>
+					<option>South Indian Bank</option>
+					<option>Standard Chartered Bank</option>
+					<option>State Bank of Bikaner & Jaipur</option>
+					<option>State Bank of Hyderabad</option>
+					<option>State Bank of Mysore</option>
+					<option>State Bank of Patiala</option>
+					<option>State Bank of Travancore</option>
+					<option>Syndicate Bank</option>
+					<option>TJSB Bank</option>
+					<option>Tamil Nadu State Co-operative Bank</option>
+					<option>Tamilnad Mercantile Bank Ltd.</option>
+					<option>The Mehsana Urban Co Op Bank Ltd</option>
+					<option>The Royal Bank of Scotland</option>
+					<option>Union Bank of India</option>
+					<option>United Bank of India</option>
+					<option>Vijaya Bank</option>
+					<option>Yes Bank Ltd</option>
+				</select>
+  			</div>
+  			<a href="/ordersuccess"><button class="button1">Pay</button></a>
+		</div>
+	</div>
+	<!--End Payment Form-->
+	<script type="text/javascript">
+		var user = '<%= user %>';
+			if(user!=''){
+			user = user.split('@');
+			user = user[0];
+			user = user[0].toUpperCase() + user.slice(1); 
+			user = 'Hi '+user+'!';
+			document.getElementById('user').className = 'dropdown';
+			var dropdown = user+' &nbsp<i class="fa fa-chevron-down"></i><div class="dropdown-content"><a href="/profile">Profile</a><a href="/cart">Cart</a><a href="/orders">Orders</a><a href="/logout">Logout</a></div>';
+			document.getElementById('user').innerHTML = dropdown;
+		} 
+	</script>
+</body>
+</html>

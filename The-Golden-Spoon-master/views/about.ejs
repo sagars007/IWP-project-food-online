@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/images/tgstrans3.png" />
+	<script src="/assets/script.js"></script>
+	<title>The Golden Spoon </title>
+</head>
+<body>
+	<!--Toolbar-->
+	<div class="toolbar">
+		<a href="/index" class="logoLink">
+			<img class="toolbarImage" src="images/tgstrans2.png">
+			<span class="tgslogo">&nbsp The Golden Spoon</span>
+		</a>
+		<ul class="toolbarList">
+			<li><a href="/menu" class="toolbarLink">MENU</a></li><span class="pipe">  |  </span>
+			<li><a href="/location" class="toolbarLink">LOCATION</a></li><span class="pipe"> | </span>
+			<li><a href="/reservation" class="toolbarLink">RESERVATION</a></li><span class="pipe"> | </span>
+			<li><a href="/about" class="toolbarLink">ABOUT US</a></li>
+		</ul>
+		<ul class="toolbarList2">
+			<!-- <li><a href="/cart" class="toolbarLink">CART &nbsp<i class="fa fa-shopping-cart"></i></a></li><span class="pipe"> |</span> -->
+			<li id=user><a href="/login" class="toolbarLink">LOGIN &nbsp<i class="fa fa-user"></i></a></li>
+		</ul>
+	</div>
+	<!--EndToolbar-->
+	<!--Image 1-->
+	<div class="parallax5">
+		<!--<img src="images/parallax5.jpg" width="100%" alt="Image Unavailable">-->
+		<div class="textOverlay">
+			<div class="text1">OUR BEGININGS</div>
+			<div class="text2"><b>___________</b></div>
+			<br>
+			<div class="text3"><b>IT ALL STARTED IN A GARAGE</b></div>
+		</div>
+	</div>
+	<!--Text1-->
+	<div class="aboutText">	 
+		<div class="aboutText1">
+			<div>“TGS had its humble beginnings. Just me, a</div>
+			<div>smoker, and an age-old challenge—cooking brisket."</div>
+		</div><br>
+		<div class="aboutText2">
+			John Rivers never set out to create the most successful BBQ chain in Florida. He’s not a classically trained chef or graduate of culinary school. It was in Texas that he found the two loves of his life: his wife and the delicate art of brisket. And it’s been those very two godsends that inspired TGS as we know it.<br><br>
+
+			John spent 20 years in the healthcare industry before retiring as president of a billion-dollar company. During that time, he had the opportunity to travel the country, honing his taste and talent for brisket perfection. As he soaked up the flavors and practices of ‘cue fare countrywide, John’s dream of de-regionalizing BBQ was born.
+		</div>
+	</div>
+	<!--Image 2-->
+	<div class="parallax6">
+		<!--<img src="images/parallax6.jpg" width="100%" alt="Image Unavailable">-->
+		<div class="textOverlay">
+			<div class="funFact1">FUN FACT:</div>
+			<div class="funFact2"><span class="funFact3"><b>Why TGS? </b></span>In short, it represents our family, John, Monica (wife), Jared (son) and Cameron (daughter). But they also appreciate the serendipitous double meaning with Genesis 2:10, where TGS branch from that which flows out of Eden. Now you know!</div>
+		</div>
+	</div>
+	<!--Text2-->
+	<div class="aboutText">	 
+		<div class="aboutText1">
+			<div>" This was never supposed to be a restaurant. My </div>
+			<div>definition of helping meant doing what felt most natural </div>
+			<div>when comfort was in order—feed those in need."</div>
+		</div><br>
+		<div class="aboutText2">
+			TGS Smokehouse began with the launch of the “Barbecue Ministry” in 2004, when John hosted a cookout fundraiser to support a local family whose young daughter was battling cancer. This one event resulted in a passion for supporting local schools, churches, and charitable organizations, and a few years later, smoking thousands of pounds of meat out of a garage just wouldn’t cut it anymore.<br><br>
+
+			After trials, tribulations, and a whole lot of burnt ends, we finally flipped that “Hot Brisket Now” sign on in October of 2009. Within the first hour, a line had formed out the door…and then around the corner.<br><br>
+
+			Today, we have several locations across the state of Florida, with plans for continued expansion and more thousands 1,000 amazing folks on our TGS team. Most importantly, the Barbecue Ministry remains our foundation and focus, and will until the cows come home.
+		</div>
+	</div>
+	<!--Newsletter-->
+	<div style="text-align:center;font-family:Verdana;padding:50px 0px;">
+		<div>SIGN UP FOR OUR NEWSLETTER!</div><br>
+		<div>
+			<form method="POST" action="/subscribe">
+				<input type="email" placeholder="EMAIL*" class="mail" name="mailid" required>
+				<input type="submit" value="SUBSCRIBE" class="button1">
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var user = '<%= user %>';
+			if(user!=''){
+			user = user.split('@');
+			user = user[0];
+			user = user[0].toUpperCase() + user.slice(1); 
+			user = 'Hi '+user+'!';
+			document.getElementById('user').className = 'dropdown';
+			var dropdown = user+' &nbsp<i class="fa fa-chevron-down"></i><div class="dropdown-content"><a href="/profile">Profile</a><a href="/cart">Cart</a><a href="/orders">Orders</a><a href="/logout">Logout</a></div>';
+			document.getElementById('user').innerHTML = dropdown;
+		} 
+	</script>
+</body>
+</html>
