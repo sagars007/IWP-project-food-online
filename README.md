@@ -1,6 +1,6 @@
-# IWP-project-food-onl
+# IWP-project-food-online
 
-
+Restaurant management web app using Node.js, MongoDB.
 
 Nodejs Dependencies:
 * ejs
