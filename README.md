@@ -1,4 +1,4 @@
-# IWP-project-food-onl
+# IWP-project-food-online
 
 Restaurant management website using Node.js, MongoDB.
 
