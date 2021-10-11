@@ -169,7 +169,7 @@ a.button2:hover, span.button2:hover, .button2:hover{
 .parallax2 {
 	position:relative;
     /* The image used */
-    background-image: url("/images/parallax2.jpg");
+    background-image: url("/images/shutterstock-img1.jpg");
 
     /* Set a specific height */
     min-height: 500px; 
@@ -212,7 +212,7 @@ a.button2:hover, span.button2:hover, .button2:hover{
 .parallax5 {
     position:relative;
     /* The image used */
-    background-image: url("/images/parallax5.jpg");
+    background-image: url("/images/about-pic1.jpg");
     /*background-size: cover;*/
 
     /*Set a specific height */
@@ -227,7 +227,7 @@ a.button2:hover, span.button2:hover, .button2:hover{
 .parallax6 {
     position:relative;
     /* The image used */
-    background-image: url("/images/parallax6.jpg");
+    background-color: black;
     /*background-size: cover;*/
 
     /*Set a specific height */
