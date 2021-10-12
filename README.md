@@ -16,8 +16,8 @@ For nodemailer credentials: (not working)
 * user: thegoldenspoon.tgs@gmail.com, pass: dholakpur123
 
 JSON file: 
-* newDatabase is latest json file to import into mongodb 'items' collection.
-* oldDatabase is deprecated and not functional. Data entries can be used if needed.
+* newDatabase is latest json file to import menu items data into mongodb 'items' collection.
+
 
 
 By ss007
