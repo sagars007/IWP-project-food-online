@@ -16,6 +16,7 @@
 			<span class="tgslogo">&nbsp Bistro Royale</span>
 		</a>
 		<ul class="toolbarList">
+			<li><a href="/index" class="toolbarLink">HOME</a></li><span class="pipe">  |  </span>
 			<li><a href="/menu" class="toolbarLink">MENU</a></li><span class="pipe">  |  </span>
 			<li><a href="/location" class="toolbarLink">LOCATION</a></li><span class="pipe"> | </span>
 			<li><a href="/reservation" class="toolbarLink">RESERVATION</a></li><span class="pipe"> | </span>
@@ -28,7 +29,7 @@
 	<!--EndToolbar-->
 	<!--Cart-->
 	<div class="cart"><br>
-		<div class="itemsInCart">~ITEMS IN CART~</div><br>
+		<div class="itemsInCart">ITEMS IN CART:</div><br>
 		<span id="bill">
 			
 		</span>
@@ -54,10 +55,10 @@
 				bill+='<tr><td>'+data[i].item+'</td><td>'+data[i].quantity+'</td><td>'+data[i].totalprice+'</td>'+del+'</tr>';
 				totalCost+=data[i].totalprice;
 			}
-			bill+='<tr><td colspan="4">Total Cost: '+totalCost+'</td></tr></table><br><a href="/payment"><span class ="button2 payment">Proceed to checkout</span></a>';
+			bill+='<tr><td colspan="4">Total Cost: Rs. '+totalCost+'</td></tr></table><br><a href="/payment"><span class ="button2 payment">Proceed to checkout</span></a>';
 		}
 		else{
-			bill = '<div class = "noItems">No items in cart!</div>';
+			bill = '<div class = "noItems"><i>No items in cart!</i></div>';
 		}
 		document.getElementById('bill').innerHTML = bill;
 	</script>

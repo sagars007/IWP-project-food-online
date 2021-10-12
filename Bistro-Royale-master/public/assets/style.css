@@ -1,3 +1,5 @@
+html { scroll-behavior: smooth; }
+
 body {
 	background-color:rgba(0,0,0,1);
 	color:rgba(255,255,255,1);
@@ -63,14 +65,14 @@ a.toolBarLink:active{
 	list-style-type:none;
 	color:rgba(255,255,255,0.7);
     position:relative; 
-    left:20%; 
+    left:15%; 
     padding-inline-start: 0px;
 }
 .toolbarList li{
     display:inline-block;
 }
 .toolbarList2{
-    display:inline-block;
+    /*display:inline-block;*/
     font-family:Verdana;
     font-size:1em;
     list-style-type:none;
@@ -146,6 +148,15 @@ a.button2:hover, span.button2:hover, .button2:hover{
 }
 .cursiveContainer{
     padding:100px 0px;
+    position:relative;
+    background-image: url("/images/gold-sparkles.png");
+     
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .cursive{
 	text-align:center;
@@ -227,7 +238,7 @@ a.button2:hover, span.button2:hover, .button2:hover{
 .parallax6 {
     position:relative;
     /* The image used */
-    background-color: black;
+    background-image: url("/images/gold-background.jpg");
     /*background-size: cover;*/
 
     /*Set a specific height */
@@ -237,6 +248,7 @@ a.button2:hover, span.button2:hover, .button2:hover{
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    
 
 }
 .parallax7 {
@@ -253,6 +265,21 @@ a.button2:hover, span.button2:hover, .button2:hover{
     background-position: center;
     background-repeat: no-repeat;
 
+}
+/* used in index page */
+.parallax8 {
+	position:relative;
+    /* The image used */
+    background-image: url("/images/parallax8.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .loginMessage {
@@ -278,7 +305,7 @@ a.button2:hover, span.button2:hover, .button2:hover{
     color: rgba(204, 0, 0, 1);
     text-overflow:auto;
     padding:20px 20px 0px;
-    display: inline-block;
+    /*display: inline-block;*/
     float: right;
 }
 .forgotPassword:link{
@@ -610,6 +637,7 @@ li input{
 }
 .locationText3{
     font-size:1.2em;
+    text-transform: uppercase;
 }
 .callUs{
     font-size:1.5em; 
@@ -701,14 +729,20 @@ table span{
 }
 .error404{
    font-size: 48px;
-   font-family: verdana;
-   text-transform: uppercase;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    letter-spacing: 2px;
    text-align: center; 
 }
+.error404red{
+    font-size: 48px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    color: red;
+}
 .error404Text{
-    font-size: 16px;
-    font-family: verdana;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 .dropdown{
@@ -828,3 +862,10 @@ table.room td{
     padding: 15px;
     border: 0px;
 }
+
+.center404img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
