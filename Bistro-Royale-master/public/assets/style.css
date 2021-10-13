@@ -591,11 +591,15 @@ li input{
     position: relative;
     width: 32%;
     margin: 8px;
+    border: 2px;
+    border-radius: 8px;
 }
 
 .locationImage {
     width: 100%;
     height: auto;
+    border: 2px;
+    border-radius: 8px;
 }
 
 .locationOverlay {
@@ -604,20 +608,24 @@ li input{
     bottom: 0;
     left: 0%;
     right: 0;
-    height: 100%;
+    height: 99%;
     width: 100%;
     opacity: 0;
     transition: .5s ease;
     background-color:rgba(180,180,180,0.8);
+    border: 2px;
+    border-radius: 8px;
     /*background-color:rgba(174,134,72,0.8);*/
 }
 
 .locationContainer:hover .locationOverlay {
     opacity: 1;
+    border: 2px;
+    border-radius: 8px;
 }
 
 .locationText {
-    color: rgba(0,0,0,1);
+    color: rgb(0, 0, 0,1);
     font-size:2em;
     font-family:Verdana;
     position: absolute;

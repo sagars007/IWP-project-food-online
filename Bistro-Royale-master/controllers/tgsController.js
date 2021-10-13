@@ -38,7 +38,7 @@ module.exports.signupSubmit = function(req, res){
       });
     }
     else{
-      res.send("User already exists");
+      res.send("**User already exists, try again**");
     }
   });
 };

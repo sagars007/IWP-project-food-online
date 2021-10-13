@@ -31,6 +31,8 @@
 	<!--form-->
 	<div class="parallax4 textOverlay">
 		<form class="login" method="POST" action="/signupSubmit">
+			<div class="formelement loginTitle"><b>Signup</b></div>
+			
 			<div class="formelement">First name:
   			<input class="formele" type="text" name="firstName" placeholder="Enter your first name" required><br></div>
 			<div class="formelement">Last name:
@@ -42,7 +44,7 @@
   			<div class="formelement">Re-type password:
   			<input class="formele" type="password" id="confirm_password" placeholder="Re-enter your password" required><br></div>
   			<div class="formelement">Phone number:
-  			<input class="formele" type="text" pattern="[789][0-9]{9}" name="phnumber" placeholder="Enter a 10 digit valid phone number" required><br></div>
+  			<input class="formele" type="text" pattern="^\d{10}$" name="phnumber" placeholder="Enter a 10 digit valid phone number" required><br></div>
   			<!--<div class="formelement">Country/Region:
   			<input class="formele" type="text" name="country" placeholder=""><br></div>
   			<div class="formelement">Pincode:
