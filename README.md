@@ -12,8 +12,6 @@ Nodejs Dependencies:
 * nodemon
 * body, cookie parser
 
-For nodemailer credentials: (not working)
-* user: thegoldenspoon.tgs@gmail.com, pass: dholakpur123
 
 JSON file: 
 * newDatabase is latest json file to import menu items data into mongodb 'items' collection.
