@@ -33,10 +33,10 @@
 	</div>
 	<div class="parallax4 textOverlay">
 		<form class="login">
-			Note: All tables are 4 seater tables. Tables can be joined upon request.<br>
+			Note- Table capacity: 4 seater. Tables can be joined upon request.<br>
 			<div class="formelement" required>City:
-				<select class="formele" name="city" placeholder="City" required>
-					<option></option>
+				<select class="formele" name="city" required>
+					<option disabled selected hidden>--pls select--</option>
 					<option>Vellore</option>
 					<option>Chennai</option>
 					<option>Mumbai</option>
@@ -52,23 +52,25 @@
   				<input class="formele" type="Time" name="time" required><br></div>
   			<div class="formelement" required>Duration:
 				<select class="formele" name="duartion" required>
-					<option></option>
+					<option disabled selected hidden>--pls select--</option>
 					<option>1 hour</option>
 					<option>1.5 hours</option>
 					<option>2 hours</option>
 					<option>2.5 hours</option>
 				</select>
 			</div>
-			<div class="formelement">Additional requirements:
+			<div class="formelement">Extras:
 				<select class="formele" name="requirements">
-					<option></option>
+					<option disabled selected hidden>--pls select--</option>
+					<option>None</option>
 					<option>Candle light</option>
 					<option>Flowers on table</option>
 					<option>Birthday song</option>
 				</select>
 			</div>
-			<div class="formelement">Additional instructions:
-  				<textarea class="formele" name="instructions"></textarea><br></div><br><br>
+			<div class="formelement" required>Imp comments:
+  				<textarea class="formele" name="instructions" required></textarea><br></div><br>
+				  <div class="formelement" style="text-align: center;">&emsp;&emsp;&emsp; <span class="reservelegendgreen">Green: Selected</span> | <span class="reservelegendgrey">Grey: Available</span> | <span class="reservelegendred">Red: Unavailable</span></div>
 			<table class="room">
 				<tr>
 					<td rowspan="3">
@@ -79,22 +81,22 @@ I
 T
 </pre>
 					</td>
-					<td><img onclick="toggle('t1')" src="images/tablegray.png" id="t1"></td>
-					<td><img onclick="toggle('t2')" src="images/tablegray.png" id="t2"></td>
-					<td><img onclick="toggle('t3')" src="images/tablegray.png" id="t3"></td>
-					<td><img onclick="toggle('t4')" src="images/tablered.png" id="t4"></td>
+					<td><img onclick="toggle('t1')" src="images/tablegray.png" id="t1"><p>Table 1</p></td>
+					<td><img onclick="toggle('t2')" src="images/tablegray.png" id="t2"><p>Table 2</p></td>
+					<td><img onclick="toggle('t3')" src="images/tablegray.png" id="t3"><p>Table 3</p></td>
+					<td><img onclick="toggle('t4')" src="images/tablered.png" id="t4"><p>Table 4</p></td>
 				</tr>
 				<tr>
-					<td><img onclick="toggle('t5')" src="images/tablegray.png" id="t5"></td>
-					<td><img onclick="toggle('t6')" src="images/tablegray.png" id="t6"></td>
-					<td><img onclick="toggle('t7')" src="images/tablegray.png" id="t7"></td>
-					<td><img onclick="toggle('t8')" src="images/tablegray.png" id="t8"></td>
+					<td><img onclick="toggle('t5')" src="images/tablegray.png" id="t5"><p>Table 5</p></td>
+					<td><img onclick="toggle('t6')" src="images/tablegray.png" id="t6"><p>Table 6</p></td>
+					<td><img onclick="toggle('t7')" src="images/tablegray.png" id="t7"><p>Table 7</p></td>
+					<td><img onclick="toggle('t8')" src="images/tablegray.png" id="t8"><p>Table 8</p></td>
 				</tr>
 				<tr>
-					<td><img onclick="toggle('t9')" src="images/tablegray.png" id="t9"></td>
-					<td><img onclick="toggle('t10')" src="images/tablered.png" id="t10"></td>
-					<td><img onclick="toggle('t11')" src="images/tablegray.png" id="t11"></td>
-					<td><img onclick="toggle('t12')" src="images/tablegray.png" id="t12"></td>
+					<td><img onclick="toggle('t9')" src="images/tablegray.png" id="t9"><p>Table 9</p></td>
+					<td><img onclick="toggle('t10')" src="images/tablered.png" id="t10"><p>Table 10</p></td>
+					<td><img onclick="toggle('t11')" src="images/tablegray.png" id="t11"><p>Table 11</p></td>
+					<td><img onclick="toggle('t12')" src="images/tablegray.png" id="t12"><p>Table 12</p></td>
 				</tr>
 			</table><br>
 			<span class ="button2 payment" onclick="checkLogin()">Reserve</span><br><br><br>
@@ -102,7 +104,7 @@ T
 	</div>
 	<div id="alert2">
 		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-		Please login to reserve a table!!
+		Please login to reserve a table!
 	</div>
 	<script type="text/javascript">
 		var user = '<%= user %>';

@@ -30,13 +30,12 @@
 	<!--EndToolbar-->
 	<!--Payment Form-->
 	<div class="parallax4 textOverlay">
-		<div class="creditcard">
+		<form class="creditcard">
 			<b>Payment:</b>
             <i class="fa fa-google-wallet" style="color:blue; font-size:2em;"></i>
             <i class="fa fa-paypal" style="color:steelblue; font-size:2em;"></i>
 			<div class="formelement">Select Bank:
-  				<select class="formele">
-  					<option></option>
+  				<select class="formele" required>
 					<option>Airtel Payments Bank</option>
 					<option>Axis Bank</option>
 					<option>HDFC Bank</option>
@@ -106,8 +105,8 @@
 					<option>Yes Bank Ltd</option>
 				</select>
   			</div>
-  			<a href="/ordersuccess"><button class="button1">Pay</button></a>
-		</div>
+  			<button class="button1" formaction="/ordersuccess" type="submit">Pay</button></a>
+		</form>
 	</div>
 	<!--End Payment Form-->
 	<script type="text/javascript">

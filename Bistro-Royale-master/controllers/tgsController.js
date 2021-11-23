@@ -30,7 +30,7 @@ module.exports.signupSubmit = function(req, res){
           models.Subscriber.create({email: data.email}).then(function(){});
           sendMail(data.email);
         }
-        sendMail(data.email,"Signup Successful", "Thank you for joining our family!");
+        sendMail(data.email,"Bistro Royale-noreply: Signup Successful!", "Thank you for choosing Bistro Royale!");
         req.session.user = data.email;
         console.log('After signup: ', req.session);
         fetchMenu(req, res);
@@ -74,7 +74,7 @@ module.exports.forgotPasswordSubmit = function(data, res){
       res.render('forgotPassword', {message: '**User does not exist**'});
     }
     else{
-      sendMail(data.username,"Forgot Password", "Your password is: "+docs.password);
+      sendMail(data.username,"Bistro Royale-noreply: Forgot Password", "Your password is: "+docs.password);
       res.render('forgotPassword', {message: '**Mail containing password has been sent**'});
     }
   });
@@ -216,26 +216,28 @@ module.exports.editProfile = function(req, res){
   });
 };
 
-var sendMail = function(receiver, sub='Newsletter subscription', msg="Thank you for subscribing to our weekly newsletter!"){
-	models.Subscriber.findOne({email: receiver}, function(err, docs){
+var sendMail = function(receiver, sub='Bistro Royale-noreply: Newsletter subscription', msg="Thank you for subscribing to our weekly newsletter! Receive latest updates about Bistro Royale. Stay up to date with latest cuisines and food trends!"){
+	
+  models.Subscriber.findOne({email: receiver}, function(err, docs){
     if(docs==undefined){
       models.Subscriber.create({email: receiver}).then(function(){});
     }
+   
   });
   var transporter = nodemailer.createTransport({
-  		service: 'gmail',
+  		service: 'hotmail',
   		auth: {
-    		user: 'thegoldenspoon.tgs@gmail.com',
-    		pass: 'dholakpur123'
+    		user: 'bistroroyale-node-619-699-9034@outlook.com',
+    		pass: 'Bistroroyale@noreply2'
   		}
 	});
 
 	var mailOptions = {
-  		from: 'thegoldenspoon.tgs@gmail.com',
+  		from: 'bistroroyale-node-619-699-9034@outlook.com',
   		to: receiver,
   		subject: sub,
   		//text: 'Thank you for subscribing to our weekly newsletter!'
-  		html: '<h3 style="font-family: verdana; text-align: center;">'+msg+'</h3>'
+  		html: '<h3 style="font-family: Bahnschrift Condensed; text-align: center;">'+msg+'</h3>'
 	};
 
 	transporter.sendMail(mailOptions, function(error, info){

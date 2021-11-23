@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="/assets/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 	<link rel="shortcut icon" type="image/x-icon" href="/images/tgstrans3.png" />
 	<script src="/assets/script.js"></script>
 	<title>Bistro Royale | Menu</title>
@@ -52,6 +53,14 @@
 	<div id="login2order">
 		
 	</div>
+
+<!--search bar-->	
+<div class="wrappersearch">
+	<input type="text" class="input" 
+	placeholder="What are you looking for?">
+	<div class="searchbtn"><i class="fas fa-search"></i></div>
+</div>
+
 	<!--Menu-->
 	<form class="menu" method="POST" action="/add2cart">
 		<div class="menuHeading" id="m1" onclick="disp1()">
@@ -126,7 +135,12 @@
 		</div>
 		<br>
 		<div class="submitMenu">
-			<input type="submit" class="button2 privilege" value="ADD TO CART">
+			<input type="submit" class="button2 privilege" onclick="addcartalert()" value="ADD TO CART">
+			<script>
+				function addcartalert() {
+				  alert("Items added to cart!");
+				}
+				</script>
 			<input class="button1 privilege" type="reset" value="RESET">
 		</div>
 	</form>

@@ -147,9 +147,9 @@ a.button2:hover, span.button2:hover, .button2:hover{
     background-color:rgba(143,38,38,1);
 }
 .cursiveContainer{
-    padding:100px 0px;
+    padding:150px 0px;
     position:relative;
-    background-image: url("/images/gold-sparkles.png");
+    background-image: url("/images/stars-vid.gif");
      
     
     /* Create the parallax scrolling effect */
@@ -239,7 +239,7 @@ a.button2:hover, span.button2:hover, .button2:hover{
     position:relative;
     /* The image used */
     background-image: url("/images/gold-background.jpg");
-    /*background-size: cover;*/
+    background-size: cover;
 
     /*Set a specific height */
     min-height: 400px; 
@@ -336,15 +336,26 @@ textarea.formele{
   font-size:100%;
   border:1px solid rgb(180,180,180);
 }
+textarea.formele:focus {
+	background-color:rgb(212, 211, 211);
+	/*border-color:rgba(143,38,38,1);*/
+}
+input.formele:focus {
+	background-color:rgb(212, 211, 211);
+	/*border-color:rgba(143,38,38,1);*/
+}
 select.formele{
   width:82%;
   padding:10px 10px;
   float:right;
   font-size:100%;
   border:1px solid rgb(180,180,180);
+
 }
+
+
 input[type=text]:focus, input[type=number]:focus, input[type=address]:focus, input[type=email]:focus, input[type=password]:focus {
-	border:2px solid rgba(143,38,38,1);
+	background-color:rgb(212, 211, 211);
 	/*border-color:rgba(143,38,38,1);*/
 }
 input[type=submit]:hover, input[type=reset]:hover {
@@ -761,7 +772,7 @@ table span{
 .dropdown:hover{
     background-color: rgba(174,134,72,1);
     color: rgba(255,255,255,1);
-    border-radius: 10px;
+    border-radius: 4px;
     
     
 }
@@ -774,7 +785,7 @@ table span{
     min-width: 125px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 .dropdown-content a{
     color: rgba(0,0,0,1);
@@ -784,7 +795,7 @@ table span{
 }
 .dropdown-content a:hover{
     background-color: rgba(143,38,38,0.8);
-    border-radius: 10px;
+    border-radius: 4px;
     
 }
 .dropdown:hover .dropdown-content {
@@ -880,7 +891,7 @@ hr.style14 {
 }
 table.room{
     border: 0px;
-    background-color: rgba(0,0,0,0);
+    
 }
 table pre{
     font-size: 2.5em;
@@ -992,4 +1003,54 @@ table.room td{
     background:#de463b;
   }
   
-  
+  .wrappersearch{
+	position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    max-width: 500px;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.wrappersearch .input {
+    width: 85%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+.searchbtn {
+    background: #ffec00;
+    width: 10%;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 6px;
+}
+
+.searchbtn .fas{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: black;
+}
+ 
+.reservelegendgreen{
+    color: green;
+}
+
+.reservelegendred{
+    color: red;
+}
+
+.reservelegendgrey{
+    color: #c4c4c4;
+}

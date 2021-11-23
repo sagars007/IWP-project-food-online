@@ -30,7 +30,7 @@
 	<!--EndToolbar-->
 	<!--Payment Form-->
 	<div class="parallax4 textOverlay">
-		<div class="creditcard">
+		<form class="creditcard">
 			<b>Payment:</b>
 			<i class="fa fa-cc-visa" style="color:navy; font-size:2em;"></i>
             <i class="fa fa-cc-amex" style="color:blue; font-size:2em;"></i>
@@ -44,8 +44,8 @@
   				<input class="formele" type="text" name="houseno" placeholder="mm/yy" required><br></div>
 			<div class="formelement">CVV:
   				<input class="formele" type="text" name="cvv" placeholder="XXX" required><br></div><br>
-  			<a href="/ordersuccess"><button class="button1">Pay</button></a>
-		</div>
+			<button class="button1" formaction="/ordersuccess" type="submit">Pay</button></a>
+			</form>
 	</div>
 	<!--End Payment Form-->
 	<script type="text/javascript">
