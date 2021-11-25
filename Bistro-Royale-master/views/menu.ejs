@@ -68,11 +68,10 @@
 			<img src="images/plus.png" class="rotPlus">
 		</div>
 		<div id="items1" style="display:none">
-			<span class="menuItem">QTY</span>
 			<ul>
 				<% for (item of menu){
 					if(item.meal=='Soups and Salads'){ %>
-					<li><%=item.item%> - <input type="number" name="<%=item.name%>"  value='' min="0" max="5" class="privilege"><span class="menuItem">Rs. <%=item.price%></span><span><br><%=item.description%></span></li>
+					<li><%=item.item%> - <input type="number" name="<%=item.name%>"  value='' min="0" max="5" class="privilege" placeholder="Qty"><span class="menuItem">Rs. <%=item.price%></span><span><br><%=item.description%></span></li>
 					<%}
 				}%>
 			</ul>
@@ -82,11 +81,10 @@
 			<img src="images/plus.png" class="rotPlus">
 		</div>
 		<div id="items2" style="display:none">
-			<span class="menuItem">QTY</span>
 			<ul>
 				<% for (item of menu){
 					if(item.meal=='Appetizers'){ %>
-					<li><%=item.item%> - <input type="number" name="<%=item.name%>"  min="0" max="5" class="privilege"><span class="menuItem">Rs. <%=item.price%></span><span><br><%=item.description%></span></li>
+					<li><%=item.item%> - <input type="number" name="<%=item.name%>"  min="0" max="5" class="privilege" placeholder="Qty"><span class="menuItem">Rs. <%=item.price%></span><span><br><%=item.description%></span></li>
 					<%}
 				}%>
 			</ul>
@@ -96,11 +94,10 @@
 			<img src="images/plus.png" class="rotPlus">
 		</div>
 		<div id="items3" style="display:none">
-			<span class="menuItem">QTY</span>
 			<ul>
 				<% for (item of menu){
 					if(item.meal=='Maincourse'){ %>
-					<li><%=item.item%> - <input type="number" name="<%=item.name%>"  min="0" max="5" class="privilege"><span class="menuItem">Rs. <%=item.price%></span><span><br><%=item.description%></span></li>
+					<li><%=item.item%> - <input type="number" name="<%=item.name%>"  min="0" max="5" class="privilege" placeholder="Qty"><span class="menuItem">Rs. <%=item.price%></span><span><br><%=item.description%></span></li>
 					<%}
 				}%>
 			</ul>
@@ -110,11 +107,10 @@
 			<img src="images/plus.png" class="rotPlus">
 		</div>
 		<div id="items4" style="display:none">
-			<span class="menuItem">QTY</span>
 			<ul>
 				<% for (item of menu){
 					if(item.meal=='Beverages'){ %>
-					<li><%=item.item%> - <input type="number" name="<%=item.name%>"  min="0" max="5" class="privilege"><span class="menuItem">Rs. <%=item.price%></span><span><br><%=item.description%></span></li>
+					<li><%=item.item%> - <input type="number" name="<%=item.name%>"  min="0" max="5" class="privilege" placeholder="Qty"><span class="menuItem">Rs. <%=item.price%></span><span><br><%=item.description%></span></li>
 					<%}
 				}%>
 			</ul>
@@ -124,11 +120,10 @@
 			<img src="images/plus.png" class="rotPlus">
 		</div>
 		<div id="items5" style="display:none">
-			<span class="menuItem">QTY</span>
 			<ul>
 				<% for (item of menu){
 					if(item.meal=='Desserts'){ %>
-					<li><%=item.item%> - <input type="number" name="<%=item.name%>"  min="0" max="5"  class="privilege"><span class="menuItem">Rs. <%=item.price%></span><span><br><%=item.description%></span></li>
+					<li><%=item.item%> - <input type="number" name="<%=item.name%>"  min="0" max="5"  class="privilege" placeholder="Qty"><span class="menuItem">Rs. <%=item.price%></span><span><br><%=item.description%></span></li>
 					<%}
 				}%>
 			</ul>
