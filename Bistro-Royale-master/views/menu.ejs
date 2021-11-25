@@ -36,7 +36,7 @@
 			<div class="text1">OUR MENU</div>
 			<div class="text2"><b>___________</b></div>
 			<br>
-			<div class="text3"><b>MAY THE BELLY RULE THE MIND</b></div>
+			<div class="text3"><b>CUISINE PAR EXCELLENCE. THIS IS BISTRO ROYALE.</b></div>
 			<br>
 			<div><a href="#callnmenu" class="button1">SCROLL DOWN</a></div>
 		</div>
@@ -55,11 +55,11 @@
 	</div>
 
 <!--search bar-->	
-<div class="wrappersearch">
+<!--<div class="wrappersearch">
 	<input type="text" class="input" 
 	placeholder="What are you looking for?">
 	<div class="searchbtn"><i class="fas fa-search"></i></div>
-</div>
+</div> -->
 
 	<!--Menu-->
 	<form class="menu" method="POST" action="/add2cart">
@@ -150,7 +150,12 @@
 		<div>
 			<form method="POST" action="/subscribe">
 				<input type="email" placeholder="EMAIL*" class="mail" name="mailid" required>
-				<input type="submit" value="SUBSCRIBE" class="button1">
+				<input type="submit" value="SUBSCRIBE" class="button1" onclick="newslettersubmit()">
+				<script>
+					function newslettersubmit() {
+					  alert("Successfully subscribed! Check email");
+					}
+					</script>
 			</form>
 		</div>
 	</div>

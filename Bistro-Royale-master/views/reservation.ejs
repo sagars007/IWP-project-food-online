@@ -35,23 +35,23 @@
 		<form class="login">
 			Note- Table capacity: 4 seater. Tables can be joined upon request.<br>
 			<div class="formelement" required>City:
-				<select class="formele" name="city" required>
-					<option disabled selected hidden>--pls select--</option>
+				<select class="formele" name="city" id="cityselect" required>
+					<option value="plsselect" disabled selected hidden>--pls select--</option>
 					<option>Vellore</option>
 					<option>Chennai</option>
 					<option>Mumbai</option>
 					<option>Delhi</option>
 					<option>Bangalore</option>
-					<option>Calcutta</option>
+					<option>Surat</option>
 					<option>Hyderabad</option>
 					<option>Panjim</option>
 					<option>Jaipur</option>
 				</select>
 			</div>
 			<div class="formelement">Time:
-  				<input class="formele" type="Time" name="time" required><br></div>
+  				<input class="formele" type="Time" name="time" id="time" required><br></div>
   			<div class="formelement" required>Duration:
-				<select class="formele" name="duartion" required>
+				<select class="formele" name="duartion" id="durationselect" required>
 					<option disabled selected hidden>--pls select--</option>
 					<option>1 hour</option>
 					<option>1.5 hours</option>
@@ -60,7 +60,7 @@
 				</select>
 			</div>
 			<div class="formelement">Extras:
-				<select class="formele" name="requirements">
+				<select class="formele" name="requirements" id="extrasselect" required>
 					<option disabled selected hidden>--pls select--</option>
 					<option>None</option>
 					<option>Candle light</option>
@@ -69,7 +69,7 @@
 				</select>
 			</div>
 			<div class="formelement" required>Imp comments:
-  				<textarea class="formele" name="instructions" required></textarea><br></div><br>
+  				<textarea class="formele" name="instructions" placeholder="--optional--"></textarea><br></div><br>
 				  <div class="formelement" style="text-align: center;">&emsp;&emsp;&emsp; <span class="reservelegendgreen">Green: Selected</span> | <span class="reservelegendgrey">Grey: Available</span> | <span class="reservelegendred">Red: Unavailable</span></div>
 			<table class="room">
 				<tr>
@@ -104,7 +104,7 @@ T
 	</div>
 	<div id="alert2">
 		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-		Please login to reserve a table!
+		Login to reserve a table!
 	</div>
 	<script type="text/javascript">
 		var user = '<%= user %>';
@@ -134,6 +134,15 @@ T
 				document.getElementById('alert2').style.display = 'block';
 			}
 			else{
+				if((document.getElementById("time").value.length == 0)
+				|| (document.getElementById("cityselect").options[document.getElementById("cityselect").selectedIndex].value == "plsselect") 
+				|| (document.getElementById("cityselect").options[document.getElementById("durationselect").selectedIndex].value == "plsselect")
+				|| (document.getElementById("cityselect").options[document.getElementById("extrasselect").selectedIndex].value == "plsselect"))
+					{
+    					alert("empty field(s)")
+					}
+								
+				else
 				window.open('/reservesuccess', "_self");
 			}
 		}

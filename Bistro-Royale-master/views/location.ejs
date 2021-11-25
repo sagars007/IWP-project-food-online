@@ -45,7 +45,18 @@
 			<div><a href="#locationContainer" class="button1">SCROLL DOWN</a></div>
 		</div>
 	</div>
-	
+
+	<!--right info banners-->
+	<div style="width: 200px; display: block; position: absolute; right: 50px; top: 580px;">
+		<a href="https://www.moleculebistroroyal.com/events" target="_blank">
+		<img src="images/banner-event.jpg" width="140px" height="640px" style="border-radius: 4px;">
+		</a>
+	</div>
+	<div style="width: 200px; display: block; position: absolute; right: 50px; top: 1270px;">
+		<a href="https://www.moleculebistroroyal.com/events" target="_blank">
+		<img src="images/banner2.jpg" width="140px" height="640px" style="border-radius: 4px;">
+		</a>
+	</div>
 	
 	<div id="locationContainer">
 	</div>
@@ -84,7 +95,7 @@
 	<div class="locationContainer">
   		<img src="images/loc6.jpg" class="locationImage">
   		<div class="locationOverlay">
-    		<div class="locationText">CALCUTTA<br><span class="addr">OH-170 Rajiv Gandhi Nagar, Calcutta - 43920</span></div>
+    		<div class="locationText">SURAT<br><span class="addr">Prasang plot, Adajan - 43920</span></div>
   		</div>
 	</div>
 	<br><br>
@@ -134,7 +145,12 @@
 		<div>
 			<form method="POST" action="/subscribe">
 				<input type="email" placeholder="EMAIL*" class="mail" name="mailid" required>
-				<input type="submit" value="SUBSCRIBE" class="button1">
+				<input type="submit" value="SUBSCRIBE" class="button1" onclick="newslettersubmit()">
+				<script>
+					function newslettersubmit() {
+					  alert("Successfully subscribed! Check email");
+					}
+					</script>
 			</form>
 		</div>
 	</div>

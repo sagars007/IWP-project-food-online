@@ -819,7 +819,7 @@ table span{
 }
 #alert2{
   padding: 20px;
-  background-color: rgba(220,220,220,1);;
+  background-color: rgba(220,220,220,0.8);
   color: rgba(0,0,0,1);
   width: 20%;
   position: absolute;
@@ -828,6 +828,7 @@ table span{
   font-family: Verdana;
   font-size: 1em;
   display: none;
+  border-radius: 4px;
 }
 #alert3{
   padding: 20px;

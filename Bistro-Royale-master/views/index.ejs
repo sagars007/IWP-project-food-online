@@ -128,7 +128,12 @@
 		<div>
 			<form method="POST" action="/subscribe">
 				<input type="email" placeholder="EMAIL*" class="mail" name="mailid" required>
-				<input type="submit" value="SUBSCRIBE" class="button1">
+				<input type="submit" value="SUBSCRIBE" class="button1" onclick="newslettersubmit()">
+				<script>
+					function newslettersubmit() {
+					  alert("Successfully subscribed! Check email");
+					}
+					</script>
 			</form>
 		</div>
 		
