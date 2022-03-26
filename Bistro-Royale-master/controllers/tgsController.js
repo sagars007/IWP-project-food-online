@@ -225,11 +225,17 @@ var sendMail = function(receiver, sub='Bistro Royale-noreply: Newsletter subscri
    
   });
   var transporter = nodemailer.createTransport({
-  		service: 'hotmail',
-  		auth: {
+  	service: "Outlook365",
+  	host: "smtp.office365.com",
+  	port: "587",
+  	tls: {
+    		ciphers: "SSLv3",
+    		rejectUnauthorized: false,
+  	},
+  	auth: {
     		user: 'bistroroyale-node-619-699-9034@outlook.com',
     		pass: 'Bistroroyale@noreply2'
-  		}
+  	}
 	});
 
 	var mailOptions = {
